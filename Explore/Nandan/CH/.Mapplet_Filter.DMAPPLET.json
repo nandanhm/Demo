@@ -1,0 +1,27 @@
+{
+  "objectInfo" : {
+    "id" : "9isL7dAf1oDe4EFyZ0SBUy",
+    "name" : "Mapplet_Filter",
+    "type" : "DMAPPLET",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0117ZZ4000000000005C"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ ]
+}

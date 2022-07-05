@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "6YhoDcqlfQLldT9UGQNaqa",
+    "name" : "Taskflow1",
+    "type" : "TASKFLOW",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "NpET1cnFKi9zhFt-gt-18144-2022-07-05T18:35:15.642Z::tf.xml"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "application/json; charset=utf-8",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "xml",
+  "objectRefs" : [ {
+    "id" : "1gQAJg4YKsGewiz21B2DuL",
+    "name" : "MT_FF_Mapping",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0117ZZ0Z0000000000PX"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    },
+    "path" : "/Explore/Nandan/CH"
+  } ]
+}
