@@ -1,5 +1,29 @@
 {
   "objectInfo" : {
+    "id" : "67qbGZT2IEVhlnw81e7toG",
+    "name" : "MappingTask3",
+    "type" : "MTT",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "0117ZZ0Z0000000000PY"
+      },
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
+      "additionalInfo" : {
+        "description" : "",
+        "contentType" : "JSON",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "zip",
+  "objectRefs" : [ {
     "id" : "0enCE1xG6F4eW0LW1fzFAd",
     "name" : "FF_Mapping_S1",
     "type" : "DTEMPLATE",
@@ -20,10 +44,9 @@
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
-    }
-  },
-  "dataFileExtension" : "zip",
-  "objectRefs" : [ {
+    },
+    "path" : "/Explore/Nandan/CH"
+  }, {
     "id" : "2arWWwy76jnlYBXqRlokWC",
     "name" : "NHM_FF",
     "type" : "Connection",
@@ -44,24 +67,24 @@
     },
     "path" : "/SYS"
   }, {
-    "id" : "9isL7dAf1oDe4EFyZ0SBUy",
-    "name" : "Mapplet_Filter",
-    "type" : "DMAPPLET",
+    "id" : "4MCHyB2C1oGbLRK58qQTIm",
+    "name" : "INWPF2QTL2C-AAD",
+    "type" : "AgentGroup",
     "metadata" : {
       "modelVersion" : {
         "major" : 0,
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "0117ZZ4000000000005C"
+        "repoHandle" : "0117ZZ25000000000003"
       },
       "contextAttributes" : null,
       "additionalInfo" : {
-        "description" : "",
+        "description" : null,
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     },
-    "path" : "/Explore/Nandan/CH"
+    "path" : "/SYS"
   } ]
 }
