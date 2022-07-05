@@ -35,14 +35,17 @@
       "repoInfo" : {
         "repoHandle" : "0117ZZ40000000000059"
       },
-      "contextAttributes" : null,
+      "contextAttributes" : [ {
+        "name" : "id",
+        "value" : "@1"
+      } ],
       "additionalInfo" : {
         "description" : "",
         "contentType" : "JSON",
         "documentState" : "VALID"
       }
     },
-    "path" : "/Explore/Nandan"
+    "path" : "/Explore/Nandan/JULY_05"
   }, {
     "id" : "2arWWwy76jnlYBXqRlokWC",
     "name" : "NHM_FF",
