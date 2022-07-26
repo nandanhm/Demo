@@ -1,0 +1,412 @@
+<aetgt:getResponse xmlns:aetgt="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd"
+                   xmlns:types1="http://schemas.active-endpoints.com/appmodules/repository/2010/10/avrepository.xsd">
+   <types1:Item>
+      <types1:EntryId>lxsnCmp6oIuQaaa-gt-2562982-2022-07-15T19:08:33.183Z::svc.xml</types1:EntryId>
+      <types1:Name>Activity_Log</types1:Name>
+      <types1:ParentFlowIds>k0qZF3a-gt-2563145-2022-07-15T19:13:39.173Z::conn.xml</types1:ParentFlowIds>
+      <types1:MimeType>application/xml+businesssconnector</types1:MimeType>
+      <types1:Description/>
+      <types1:AppliesTo/>
+      <types1:Tags/>
+      <types1:VersionLabel>1.0</types1:VersionLabel>
+      <types1:State>CURRENT</types1:State>
+      <types1:ProcessGroup/>
+      <types1:CreatedBy>nandanhm@ipsidc.com</types1:CreatedBy>
+      <types1:CreationDate>2022-07-15T19:08:33Z</types1:CreationDate>
+      <types1:ModifiedBy>nandanhm@ipsidc.com</types1:ModifiedBy>
+      <types1:ModificationDate>2022-07-18T06:22:23Z</types1:ModificationDate>
+      <types1:PublicationStatus>out-of-date</types1:PublicationStatus>
+      <types1:PublishedBy>nandanhm@ipsidc.com</types1:PublishedBy>
+      <types1:PublicationDate>2022-07-15T20:34:58Z</types1:PublicationDate>
+      <types1:PublishedContributionId>project:/rt.connector/Activity_Log/Activity_Log_svcDef.xml</types1:PublishedContributionId>
+      <types1:AutosaveExists>false</types1:AutosaveExists>
+      <types1:Entry>
+         <businessConnector xmlns="http://schemas.informatica.com/socrates/data-services/2014/05/business-connector-model.xsd"
+                            agentOnly="false"
+                            debug="false"
+                            displayName="Activity_Log"
+                            label=""
+                            name="Activity_Log"
+                            uuid="a3a28951-d9ee-4190-9a0b-657770c70891">
+            <description/>
+            <tags/>
+            <connectionAttributes xmlns="http://schemas.informatica.com/appmodules/screenflow/2014/04/avosConnectors.xsd">
+               <connectionAttribute description="Host Name"
+                                    masked="false"
+                                    name="hostName"
+                                    required="true"
+                                    testWith="apse1.dm-ap.informaticacloud.com"
+                                    type="string"/>
+            </connectionAttributes>
+            <actions>
+               <action category="Activity_Log"
+                       failOnError="true"
+                       forSearch="false"
+                       label="Activity_Log"
+                       maxRedirects="100"
+                       name="Activity_Log"
+                       preemptiveAuth="true"
+                       responseEncoding="">
+                  <description/>
+                  <input>
+                     <parameter label="icSessionId"
+                                name="icSessionId"
+                                nogen="true"
+                                required="false"
+                                testWith="4GRLfcUgufDdgjnTqSY6qG"
+                                type="string"/>
+                  </input>
+                  <binding>
+                     <restSimpleBinding multiUsing="semicolonSeparated"
+                                        url="https://{$hostName}/saas/api/v2/activity/activityLog?rowLimit=10000"
+                                        verb="GET">
+                        <mutualAuth enabled="false">
+                           <keyStore mode="file"/>
+                           <keyStorePassword/>
+                        </mutualAuth>
+                        <httpHeaders>
+                           <header name="Content-Type">application/json</header>
+                           <header name="Accept">application/json</header>
+                           <header name="icSessionId">{$icSessionId}</header>
+                        </httpHeaders>
+                     </restSimpleBinding>
+                  </binding>
+                  <output>
+                     <field description=""
+                            name="objectName"
+                            property="objectName"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">Activity_Log</option>
+                        </options>
+                     </field>
+                     <field description=""
+                            name="objectId"
+                            property="objectId"
+                            type="string"/>
+                     <field description=""
+                            name="startTime"
+                            property="startTime"
+                            type="string"/>
+                     <field description="" name="endTime" property="endTime" type="string"/>
+                     <field description=""
+                            name="successSourceRows"
+                            property="successSourceRows"
+                            type="string"/>
+                     <field description=""
+                            name="successTargetRows"
+                            property="successTargetRows"
+                            type="string"/>
+                     <field description=""
+                            name="failedTargetRows"
+                            property="failedTargetRows"
+                            type="string"/>
+                     <field description=""
+                            name="failedSourceRows"
+                            property="failedSourceRows"
+                            type="string"/>
+                     <field description=""
+                            name="totalSuccessRows"
+                            property="totalSuccessRows"
+                            type="string"/>
+                     <field description=""
+                            name="totalFailedRows"
+                            property="totalFailedRows"
+                            type="string"/>
+                     <field description="" name="state" property="state" type="string"/>
+                     <field description="" name="type" property="type" type="string"/>
+                  </output>
+               </action>
+            </actions>
+            <objects>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Activity_Log">
+                  <description/>
+                  <detail>
+                     <field name="endTimeUtc"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="startedBy" nullable="true" required="false" type="string"/>
+                     <field name="SC__type" nullable="true" required="false" type="string"/>
+                     <field name="successTargetRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="parentTaskFederatedId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="hasStopOnErrorRecord"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="type" nullable="true" required="false" type="string"/>
+                     <field name="failedSourceRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="stopOnError"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="successSourceRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="entries"
+                            nullable="true"
+                            required="false"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo">Activity_Log_entries</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="objectName"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="failedTargetRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="startTime" nullable="true" required="false" type="string"/>
+                     <field name="totalSuccessRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="id" nullable="true" required="false" type="string"/>
+                     <field name="runId" nullable="true" required="false" type="double"/>
+                     <field name="endTime" nullable="true" required="false" type="string"/>
+                     <field name="state" nullable="true" required="false" type="double"/>
+                     <field name="totalFailedRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="runContextType"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="objectId" nullable="true" required="false" type="string"/>
+                     <field name="startTimeUtc"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Activity_Log_entries_logEntryItemAttrs">
+                  <description/>
+                  <detail>
+                     <field name="CONSUMED_COMPUTE_UNITS"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="IS_SERVER_LESS"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="REQUESTED_COMPUTE_UNITS"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="Session_Log_File_Name"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="SERVICE_TYPE"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="ERROR_CODE"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Activity_Log_entries_transformationEntries">
+                  <description/>
+                  <detail>
+                     <field name="SC__type" nullable="true" required="false" type="string"/>
+                     <field name="failedRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="successRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="id" nullable="true" required="false" type="string"/>
+                     <field name="txType" nullable="true" required="false" type="string"/>
+                     <field name="txName" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Activity_Log_entries_sessionVariables">
+                  <description/>
+                  <detail>
+                     <field name="SC__P_flt_add"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="SC__P_add_extra_string"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="SC__add_name"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="Activity_Log_entries">
+                  <description/>
+                  <detail>
+                     <field name="agentId" nullable="true" required="false" type="string"/>
+                     <field name="runtimeEnvironmentId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="endTimeUtc"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="contextExternalId"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="SC__type" nullable="true" required="false" type="string"/>
+                     <field name="successTargetRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="type" nullable="true" required="false" type="string"/>
+                     <field name="failedSourceRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="successSourceRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="transformationEntries"
+                            nullable="true"
+                            required="false"
+                            type="objectlist">
+                        <options>
+                           <option name="referenceTo">Activity_Log_entries_transformationEntries</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="failedTargetRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="startTime" nullable="true" required="false" type="string"/>
+                     <field name="id" nullable="true" required="false" type="string"/>
+                     <field name="state" nullable="true" required="false" type="double"/>
+                     <field name="totalFailedRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="logEntryItemAttrs"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">Activity_Log_entries_logEntryItemAttrs</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="startedBy" nullable="true" required="false" type="string"/>
+                     <field name="hasStopOnErrorRecord"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="errorMsg" nullable="true" required="false" type="string"/>
+                     <field name="sessionVariables"
+                            nullable="true"
+                            required="false"
+                            type="reference">
+                        <options>
+                           <option name="referenceTo">Activity_Log_entries_sessionVariables</option>
+                           <option name="relationshipName">Child</option>
+                        </options>
+                     </field>
+                     <field name="subTaskEntries"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="stopOnError"
+                            nullable="true"
+                            required="false"
+                            type="boolean"/>
+                     <field name="entries" nullable="true" required="false" type="string"/>
+                     <field name="objectName"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="totalSuccessRows"
+                            nullable="true"
+                            required="false"
+                            type="double"/>
+                     <field name="runId" nullable="true" required="false" type="double"/>
+                     <field name="endTime" nullable="true" required="false" type="string"/>
+                     <field name="runContextType"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                     <field name="startTimeUtc"
+                            nullable="true"
+                            required="false"
+                            type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="string">
+                  <description/>
+                  <detail>
+                     <field name="string" nullable="true" required="false" type="string"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="boolean">
+                  <description/>
+                  <detail>
+                     <field name="boolean" nullable="true" required="false" type="boolean"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="double">
+                  <description/>
+                  <detail>
+                     <field name="double" nullable="true" required="false" type="double"/>
+                  </detail>
+               </processObject>
+               <processObject xmlns="http://schemas.active-endpoints.com/appmodules/screenflow/2011/06/avosHostEnvironment.xsd"
+                              isByCopy="true"
+                              name="integer">
+                  <description/>
+                  <detail>
+                     <field name="integer" nullable="true" required="false" type="int"/>
+                  </detail>
+               </processObject>
+            </objects>
+         </businessConnector>
+      </types1:Entry>
+      <types1:GUID>1k8dRjKIquigZoBMFvsKkw</types1:GUID>
+      <types1:DisplayName>Activity_Log</types1:DisplayName>
+   </types1:Item>
+   <types1:CurrentServerDateTime>2022-07-26T14:13:39.738Z</types1:CurrentServerDateTime>
+</aetgt:getResponse>
